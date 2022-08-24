@@ -1,9 +1,39 @@
-package terrainbuilder;
-import terrainbuilder.Level;
-import terrainbuilder.RandListGen;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Random;
+import java.util.ArrayList;
+
+
+class Level {
+	int len;
+	StringBuffer levelcore = new StringBuffer();
+	Level(int l){
+		len=l;
+		for(int i = 0;i<len;i++) {
+			levelcore.append(" ");
+		}
+	}
+	void make(int position,char piece) {
+		levelcore.setCharAt(position, piece);
+	}
+	
+	
+}
+class RandListGen {
+	int n;
+	public RandListGen(int number){
+        n = number;
+	}
+	public int[] giveList() {
+		Random rng = new Random();
+        int a[] = {-1,0,1};
+        int arr[] = new int[n];
+		for(int i = 0;i<n;i++) {
+			arr[i]=a[rng.nextInt(3)];
+		}
+		return arr;
+	}
+}
 public class TerrainBuilder {
 	public static void main(String a[]) {
 		Scanner sc = new Scanner(System.in);
