@@ -37,7 +37,7 @@ class RandListGen {
 public class TerrainBuilder {
 	public static void main(String a[]) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter width of terrain : ");
+		System.out.print("Enter size of terrain : ");
 		int widthOfTerrain = sc.nextInt();
 		RandListGen r = new RandListGen(widthOfTerrain);
 		int ter[] = r.giveList();
@@ -72,5 +72,6 @@ public class TerrainBuilder {
 		Iterator<Level> it = levels.iterator();
 		while(it.hasNext())
 		System.out.println(it.next().levelcore);
+		System.out.println();
 	}
 }

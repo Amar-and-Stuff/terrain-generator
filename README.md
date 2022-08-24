@@ -1,4 +1,6 @@
 # terrain-generator
-This program generates command line terrain using ascii
 
-Takes input of distance you want to render and program will generate random terrain of that length.
+<span style="font-size:18px">A simple little program to generate a random terrain(mountains and valleys) with / _ \\ of given size.</span>
+
+![Alt text](/screenshot.png "RESULT")
+
